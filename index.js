@@ -5,6 +5,7 @@ submit.addEventListener("click", function(){
     var output = document.getElementById("output");
     var yearOfBirth = document.querySelector("#year-of-birth").value;//Pulling input value from the frontend
     var currentYear = new Date().getFullYear();//Getting and setting the current human year
+    output.innerHTML = "";
     if ( yearOfBirth == 0 || yearOfBirth == null || yearOfBirth < 0 ) { //tests the value yearOfBirth, if negative, null or zero, the input will be clear and placeholder value will be turned to "invalid input".
         document.querySelector("#year-of-birth").value = "";
         document.querySelector("#year-of-birth").setAttribute("placeholder", "Invalid input");
